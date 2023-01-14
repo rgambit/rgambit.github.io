@@ -1,0 +1,153 @@
+/* Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    opacity: 0.75;
+}
+
+/* Nav section */
+
+
+.nav-container {
+    position: fixed;
+    width: 100%; /*if using position fixed with display flex, need to also set the width to 100%*/
+    background-color: black;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    align-items: center;
+    height: 69px;
+    border-bottom: 1px solid seashell;
+}
+
+.nav-links {
+    list-style-type: none;
+    text-decoration: underline;
+    display: inline-flex;
+    gap: 40px;
+}
+
+
+#logo {
+    margin-right: auto;
+    margin-left: 10px;
+    height: 50px;
+}
+
+
+/* Header section */
+
+.mission-container {
+    display: flex;
+    justify-content: center; /*Any content within the container will be in the center (along the main (horizontal) axis)*/
+    align-items: center; /*Any content within the container will be in the center (along the cross (vertical) axis)*/
+    background-image: url(./images/img-mission-background.jpg); /*The container itself will have a background image, so the content will be on top of this*/
+    height: 700px;
+    width: 1200px;
+    margin: auto; /*The entire container will be centred on the page, with equal margin each side*/
+}
+
+.mission-text {
+    text-align: center;
+    line-height: 50px;
+    background-color: black;
+    width: 1200px;
+}
+
+
+/* Featured section */
+
+.featured-wrapper {
+    max-width: 1000px; /* Set as a max width, not just width, when I'm going to do row wrap below so that it wraps into a new line when the screen hits 1000px */
+    margin: auto;
+
+}
+
+.featured-text {
+    padding: 50px 20px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.featured-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+
+.featured-images-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.featured-images img {
+    height: 200px;
+    width: 300px;
+}
+
+
+
+/* Locations section */
+
+.location-container {
+    background-image: url(./images/img-locations-background.jpg); 
+    height: 550px;
+    width: 1200px;
+    display: flex;
+    flex-direction: column; /*The flex items overall will be in a column to start with, so that the first flex item (the title) is shown above the pictures like a column*/
+    align-items: center;
+    justify-content: center; /*To space the elements, first I need to center them here and then add a separate gap property of the space inbetween - see below*/
+    margin: auto;
+    margin-top: 50px;
+
+
+}
+
+.location-wrapper {
+    display: flex;
+    flex-direction: row; /*After the first flex item (the heading) is in a flex-column format, I can then change the rest of the flex items to row ny wrapping them all in a div and switcing the direction*/
+    gap: 40px;
+    align-items: center;
+    justify-content: center; /*To space the elements, first I need to center them here and then add a separate gap property of the space inbetween - see below*/
+    margin-top: 50px;;
+
+}
+
+
+.location-text {
+    background-color: black;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 60px;
+    opacity: 1;
+}
+
+/* Contact section */
+
+.contact-container {
+    margin: 50px auto;
+    text-align: center;
+    line-height: 60px;
+}
+
+
+/* Footer section */
+
+footer h5 {
+    margin-left: 20px;
+}
